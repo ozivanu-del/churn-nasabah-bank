@@ -28,6 +28,8 @@ KELAS = "46A"
 
 FOLDER = Path(__file__).parent
 FILE_DATA = FOLDER / "data" / "Churn_Modelling.csv"
+if not FILE_DATA.exists():  # CSV boleh juga diletakkan satu folder dengan app.py
+    FILE_DATA = FOLDER / "Churn_Modelling.csv"
 FILE_MODEL = FOLDER / "model_churn.joblib"
 BIRU, MERAH = "#2563EB", "#DC2626"
 
